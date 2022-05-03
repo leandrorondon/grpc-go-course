@@ -23,5 +23,5 @@ func main() {
 
 	doSum(c)
 
-	doPrime(c, 120)
+	doPrimes(c, 120)
 }
