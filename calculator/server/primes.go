@@ -14,9 +14,12 @@ func (s *Server) Primes(in *pb.PrimeRequest, stream pb.CalculatorService_PrimesS
 
 	for n > 1 {
 		if n%k == 0 {
-			stream.SendMsg(&pb.PrimeResponse{
+			err := stream.SendMsg(&pb.PrimeResponse{
 				Factor: k,
 			})
+			if err != nil {
+				log.Fatalf("Error sending Prime response: %v\n", err)
+			}
 			n = n / k
 			continue
 		}
