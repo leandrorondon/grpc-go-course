@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 	"log"
 
 	pb "github.com/leandrorondon/grpc-go-course/blog/proto"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 )
 
 func (s *Server) Create(ctx context.Context, in *pb.Blog) (*pb.BlogId, error) {
