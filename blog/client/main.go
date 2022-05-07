@@ -22,5 +22,7 @@ func main() {
 
 	id := createBlog(c)
 	readBlog(c, id)
-	readBlog(c, "6276c75b6fe76f265cf5e642")
+	//readBlog(c, "6276c75b6fe76f265cf5e642") // invalid ID
+	updateBlog(c, id)
+	readBlog(c, id)
 }
