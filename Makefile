@@ -83,3 +83,9 @@ about: ## Display info related to the build
 
 help: ## Show this help
 	@${HELP_CMD}
+
+run_greet_server:
+	GODEBUG=x509sha1=1 bin/greet/server
+
+run_greet_client:
+	GODEBUG=x509sha1=1 ./bin/greet/client
